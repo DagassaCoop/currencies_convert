@@ -1,0 +1,64 @@
+$currencyTitleW: 50px;
+
+.ConvertCurrency {
+  width: 50%;
+  display: flex;
+
+  &__select {
+    position: relative;
+    z-index: 1;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+
+
+    &-title {
+      width: $currencyTitleW;
+      cursor: pointer;
+    }
+
+    &-undermenu {
+      position: absolute;
+      z-index: 2;
+      background-color: white;
+      top: 100%;
+      left: calc(50% - 25px);
+      padding: 8px 0 10px;
+      width: $currencyTitleW;
+      max-height: 100px;
+      border: 1px solid black;
+      overflow-y: overlay;
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      &::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+        -webkit-border-radius: 6px;
+      }
+
+      &-item {
+        color: gray;
+        cursor: pointer;
+        width: 80%;
+        margin: 0 10%;
+
+        &_active {
+          color: blue;
+          font-weight: bold;
+        }
+      }
+
+      &_hidden {
+        display: none;
+      }
+
+    }
+  }
+
+  &__input {
+    width: 70%;
+  }
+}

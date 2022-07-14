@@ -1,0 +1,14 @@
+.Convert {
+  width: 60%;
+  margin: 25px auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__button {
+    width: 30%;
+    height: 40px;
+    margin: 30px 35%;
+    cursor: pointer;
+  }
+
+}
